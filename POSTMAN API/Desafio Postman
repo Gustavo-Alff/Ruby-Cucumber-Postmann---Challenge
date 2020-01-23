@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "ae93d5ab-fb97-4533-bc70-08b26e31ee6f",
+		"name": "Writing test scripts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Postman - Poupança Sicredi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48c6c432-6ae0-48b5-b6b9-7abfdf708856",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body(\"{\\\"id\\\":1,\\\"meses\\\":[\\\"112\\\",\\\"124\\\",\\\"136\\\",\\\"148\\\"],\\\"valor\\\":[\\\"2.802\\\",\\\"3.174\\\",\\\"3.564\\\",\\\"3.971\\\"]}\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador",
+					"protocol": "http",
+					"host": [
+						"5b847b30db24a100142dce1b",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"simulador"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "06d2bb9a-e55f-431e-b124-98ce9a7c4fd8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "99d9d036-7a45-484d-9164-35ba6cdd3c7c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
